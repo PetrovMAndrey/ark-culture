@@ -31,6 +31,49 @@
   position:absolute;left:0;top:0;
   color:var(--text4);
 }
+.approach-useful{
+  margin-top:36px;
+}
+.approach-useful-title{
+  font-family:'PT Serif',serif;
+  font-size:18px;
+  color:var(--text);
+  line-height:1.4;
+  margin-bottom:18px;
+}
+.approach-useful-title em{
+  color:var(--text2);
+  font-style:italic;
+}
+.approach-useful-list{
+  list-style:none;
+  margin:0;
+  padding:20px 22px;
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+.approach-useful-list li{
+  position:relative;
+  padding-left:22px;
+  color:var(--text2);
+  font-size:15px;
+  line-height:1.55;
+}
+.approach-useful-list li+li{
+  margin-top:18px;
+}
+.approach-useful-list li::before{
+  content:'';
+  position:absolute;
+  left:0;
+  top:0.72em;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--accent);
+  transform:translateY(-50%);
+}
 .approach-steps{}
 .step-item{
   display:grid;
