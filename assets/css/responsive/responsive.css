@@ -1,0 +1,58 @@
+/* =========================================
+   MOBILE
+   ========================================= */
+@media(max-width:1024px){
+  nav{padding:0 32px}
+  section{padding:80px 32px}
+  #hero .hero-content{padding:108px 32px 64px;max-width:680px}
+  #hero .hero-bg-photo{width:66%;background-size:auto 100%;background-position:right center}
+  .about-inner{grid-template-columns:1fr;gap:48px}
+  .dir-grid{grid-template-columns:1fr}
+  .proj-card.span-8,.proj-card.span-4,.proj-card.span-6,.proj-card.span-5,.proj-card.span-7,.proj-card.span-12{grid-column:span 12}
+  .proj-grid{grid-template-columns:1fr}
+  .approach-layout{grid-template-columns:1fr;gap:40px}
+  .cta-grid{grid-template-columns:1fr;gap:48px}
+  .contacts-grid{grid-template-columns:1fr}
+  .extra-grid{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:24px}
+  .footer-nav-links{display:none}
+  .ticker-outer{margin:40px -32px 48px}
+  .hero-desc-line-nowrap{white-space:normal}
+  .contact-card-qr{width:132px;height:132px}
+  .contact-card-logo{width:168px}
+}
+@media(max-width:640px){
+  nav{padding:0 20px}
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  section{padding:60px 20px}
+  #hero .hero-content{padding:92px 20px 50px;max-width:100%}
+  #hero .hero-bg-photo{width:100%;background-size:auto 100%;background-position:right center}
+  #hero .hero-bg-photo::after{background:linear-gradient(90deg,var(--bg) 0%, rgba(13,13,12,0.90) 28%, rgba(13,13,12,0.58) 44%, rgba(13,13,12,0.20) 62%, rgba(13,13,12,0.03) 82%, rgba(13,13,12,0) 100%)}
+  .dir-grid{border:none;gap:12px}
+  .dir-card{border:1px solid var(--border)}
+  .extra-grid{grid-template-columns:1fr;border:none;gap:8px}
+  .extra-card{border:1px solid transparent}
+  .contacts-grid{border:none;gap:8px}
+  .contact-card{border:1px solid var(--border);gap:18px}
+  .contact-card-qr{width:104px;height:104px}
+  .contact-card-logo{width:132px}
+  .footer-top{display:block}
+  .footer-logo-wrap{margin-bottom:20px}
+  .footer-quote{text-align:left;max-width:100%;margin-top:20px}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center}
+  .cta-form{padding:24px 20px}
+  .modal-box{margin:0;max-height:92vh}
+  .modal-body{padding:20px}
+  .modal-header{padding:20px}
+  .ticker-outer{margin:32px -20px 40px}
+  .mobile-menu{padding:16px 20px}
+}
+@media(max-width:480px){
+  .contact-card{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .contact-card-qr{width:112px;height:112px}
+  .contact-card-logo{width:140px}
+}

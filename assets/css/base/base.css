@@ -1,0 +1,24 @@
+/* =========================================
+   RESET & VARIABLES
+   ========================================= */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0d0d0c;
+  --bg2:#111110;
+  --bg3:#161715;
+  --bg4:#1c1d1b;
+  --bg5:#222321;
+  --accent:#d4600a;
+  --accent-hi:#e8700f;
+  --accent-dim:rgba(212,96,10,0.10);
+  --accent-border:rgba(212,96,10,0.22);
+  --text:#edeae4;
+  --text2:#9c9890;
+  --text3:#5c5a55;
+  --text4:#3a3936;
+  --border:rgba(255,255,255,0.055);
+  --border2:rgba(255,255,255,0.03);
+  --line:rgba(255,255,255,0.08);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Manrope',sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}

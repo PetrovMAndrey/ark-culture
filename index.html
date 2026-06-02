@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>АРК — Аналитика · Развитие · Культура</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/logos/logo 32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/logos/logo 64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base/base.css">
+<link rel="stylesheet" href="assets/css/overlays/background.css">
+<link rel="stylesheet" href="assets/css/layout/navigation.css">
+<link rel="stylesheet" href="assets/css/sections/hero.css">
+<link rel="stylesheet" href="assets/css/layout/common.css">
+<link rel="stylesheet" href="assets/css/sections/about.css">
+<link rel="stylesheet" href="assets/css/sections/directions.css">
+<link rel="stylesheet" href="assets/css/sections/projects.css">
+<link rel="stylesheet" href="assets/css/overlays/modal.css">
+<link rel="stylesheet" href="assets/css/sections/expertise.css">
+<link rel="stylesheet" href="assets/css/sections/approach.css">
+<link rel="stylesheet" href="assets/css/sections/cta.css">
+<link rel="stylesheet" href="assets/css/sections/contacts.css">
+<link rel="stylesheet" href="assets/css/sections/footer.css">
+<link rel="stylesheet" href="assets/css/components/animations.css">
+<link rel="stylesheet" href="assets/css/components/scroll.css">
+<link rel="stylesheet" href="assets/css/responsive/responsive.css">
+<link rel="stylesheet" href="assets/css/phase1.css">
+</head>
+<body>
+
+<!-- SCROLL PROGRESS BAR -->
+<div class="scroll-progress" id="scrollBar"></div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="mainNav">
+  <a href="#hero" class="nav-logo-wrap">
+    <img class="nav-logo-svg" src="assets/logos/logo orange.svg" alt="Логотип АРК">
+    <span class="nav-logo-text">АРК</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">О нас</a></li>
+    <li><a href="#directions">Направления</a></li>
+    <li><a href="#projects">Проекты</a></li>
+    <li><a href="#approach">Подход</a></li>
+    <li><a href="#contacts">Контакты</a></li>
+  </ul>
+  <a href="#cta" class="nav-cta">Обсудить проект</a>
+  <div class="burger" id="burgerBtn" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMobile()">О нас</a>
+  <a href="#directions" onclick="toggleMobile()">Направления</a>
+  <a href="#projects" onclick="toggleMobile()">Проекты</a>
+  <a href="#approach" onclick="toggleMobile()">Подход</a>
+  <a href="#cta" onclick="toggleMobile()">Обсудить проект</a>
+  <a href="#contacts" onclick="toggleMobile()">Контакты</a>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero">
+  <!-- Background layers -->
+  <div class="hero-bg">
+    <div class="hero-grid-lines"></div>
+    <div class="hero-bg-photo" aria-hidden="true"></div>
+  </div>
+
+  <!-- Main content -->
+  <div class="hero-content">
+    <div class="hero-title-block">
+      <div class="hero-eyebrow">АРК</div>
+      <h1 class="hero-h1">
+        Аналитика.<br>
+        Развитие.<br>
+        <em>Культура.</em>
+      </h1>
+      <div class="hero-h1-sub">Проектная среда · Digital</div>
+      <p class="hero-desc">
+        <span class="hero-desc-line hero-desc-line-nowrap">АРК создаёт и реализует культурные, территориальные и digital-проекты.</span>
+        <span class="hero-desc-line">Системный подход: аналитика, проектирование, внедрение.</span>
+        <span class="hero-desc-line">Серьёзные задачи. Конкретные решения.</span>
+      </p>
+      <a href="#projects" class="hero-btn-primary">Смотреть проекты</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section id="about">
+  <!-- Background: spec table fragment -->
+  <div class="bg-layer bg-table" style="top:10%;right:-2%;width:35%;height:60%;opacity:0.025;filter:blur(0.5px);z-index:0">
+    <svg width="100%" height="100%" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="10" width="380" height="300" fill="none" stroke="#aaa" stroke-width="0.8"/>
+      <line x1="10" y1="35" x2="390" y2="35" stroke="#aaa" stroke-width="0.6"/>
+      <line x1="10" y1="60" x2="390" y2="60" stroke="#aaa" stroke-width="0.4"/>
+      <line x1="10" y1="85" x2="390" y2="85" stroke="#aaa" stroke-width="0.4"/>
+      <line x1="10" y1="110" x2="390" y2="110" stroke="#aaa" stroke-width="0.4"/>
+      <line x1="10" y1="135" x2="390" y2="135" stroke="#aaa" stroke-width="0.4"/>
+      <line x1="10" y1="160" x2="390" y2="160" stroke="#aaa" stroke-width="0.4"/>
+      <line x1="10" y1="185" x2="390" y2="185" stroke="#aaa" stroke-width="0.4"/>
+      <line x1="10" y1="210" x2="390" y2="210" stroke="#aaa" stroke-width="0.4"/>
+      <line x1="10" y1="235" x2="390" y2="235" stroke="#aaa" stroke-width="0.4"/>
+      <line x1="10" y1="260" x2="390" y2="260" stroke="#aaa" stroke-width="0.4"/>
+      <line x1="140" y1="10" x2="140" y2="310" stroke="#aaa" stroke-width="0.5"/>
+      <line x1="280" y1="10" x2="280" y2="310" stroke="#aaa" stroke-width="0.4"/>
+      <rect x="11" y="11" width="128" height="23" fill="#888" opacity="0.18"/>
+      <rect x="141" y="11" width="138" height="23" fill="#888" opacity="0.15"/>
+      <rect x="281" y="11" width="108" height="23" fill="#888" opacity="0.15"/>
+    </svg>
+  </div>
+
+  <div class="s-label">О направлении</div>
+  <div class="about-inner">
+    <div class="about-text reveal">
+      <p class="about-text-lead">АРК — это <em>авторская проектная система,</em> которая соединяет аналитику, культуру и цифровые решения в единую рабочую среду.</p>
+      <div class="about-body">
+        <p>АРК занимается задачами, которые не решаются стандартным набором услуг. Культурные инициативы, развитие территорий, цифровые продукты, аналитические платформы — каждый проект требует <strong>собственной логики и структуры.</strong></p>
+        <p>Направление работает с организациями, учреждениями и территориями, которым нужен <strong>системный взгляд</strong> — не просто красивый дизайн или шаблонная стратегия, а реальное проектирование от первого вопроса до конечного решения.</p>
+      </div>
+      <div class="about-chips">
+        <span class="chip">Культурные инициативы</span>
+        <span class="chip">Digital-проекты</span>
+        <span class="chip">Аналитика</span>
+        <span class="chip">AI-инструменты</span>
+        <span class="chip">Территории</span>
+        <span class="chip">Туризм</span>
+        <span class="chip">Бизнес / госструктуры</span>
+        <span class="chip">Партнёрства</span>
+        <span class="chip">Концепции</span>
+        <span class="chip">Систематизация</span>
+      </div>
+      <div class="about-digital-block">
+        <div class="about-digital-title">DIGITAL</div>
+        <div class="about-digital-desc">Цифровые сервисы, автоматизация и современные технологии</div>
+      </div>
+    </div>
+    <div class="about-right reveal reveal-d1">
+      <div class="about-pillars">
+        <div class="pillar">
+          <div class="pillar-letter">А</div>
+          <div class="pillar-name">Аналитика</div>
+          <div class="pillar-desc">Исследование, структурирование, систематизация информации и процессов</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-letter">Р</div>
+          <div class="pillar-name">Развитие</div>
+          <div class="pillar-desc">Стратегия роста, точки изменений, проектная логика и реализация</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-letter">К</div>
+          <div class="pillar-name">Культура</div>
+          <div class="pillar-desc">Среда, смыслы, пространства, культурные и общественные инициативы</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DIRECTIONS
+     ============================================================ -->
+<section id="directions">
+  <div class="s-label">Чем занимается АРК</div>
+  <h2 class="s-title">Направления <em>работы</em></h2>
+  <div class="dir-grid reveal">
+    <div class="dir-card" onclick="openModal('dir1')">
+      <div class="dir-card-header">
+        <span class="dir-num">01 / 04</span>
+        <svg class="dir-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </div>
+      <div class="dir-title">Проекты и концепции</div>
+      <div class="dir-desc">АРК разрабатывает концепции и развивает проекты с нуля. Авторская проектная логика, структурирование идей и поиск точек роста для инициатив любого масштаба.</div>
+      <div class="dir-tags-list">
+        <span class="dir-tag">Концепции</span>
+        <span class="dir-tag">Проектирование</span>
+        <span class="dir-tag">Инициативы</span>
+        <span class="dir-tag">Стратегия</span>
+      </div>
+    </div>
+    <div class="dir-card" onclick="openModal('dir2')">
+      <div class="dir-card-header">
+        <span class="dir-num">02 / 04</span>
+        <svg class="dir-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </div>
+      <div class="dir-title">Территории и туризм</div>
+      <div class="dir-desc">АРК создаёт туристические маршруты и территориальные концепции. Общественные пространства, культурные инициативы, событийные форматы и средовые решения.</div>
+      <div class="dir-tags-list">
+        <span class="dir-tag">Территории</span>
+        <span class="dir-tag">Туризм</span>
+        <span class="dir-tag">Среда</span>
+        <span class="dir-tag">Маршруты</span>
+      </div>
+    </div>
+    <div class="dir-card" onclick="openModal('dir3')">
+      <div class="dir-card-header">
+        <span class="dir-num">03 / 04</span>
+        <svg class="dir-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </div>
+      <div class="dir-title">Аналитика и Digital</div>
+      <div class="dir-desc">АРК разрабатывает digital-решения, AI-инструменты и аналитические платформы. Систематизация информации, цифровые музеи, навигаторы, продуктовые решения.</div>
+      <div class="dir-tags-list">
+        <span class="dir-tag">Digital</span>
+        <span class="dir-tag">AI</span>
+        <span class="dir-tag">Аналитика</span>
+        <span class="dir-tag">Платформы</span>
+      </div>
+    </div>
+    <div class="dir-card" onclick="openModal('dir4')">
+      <div class="dir-card-header">
+        <span class="dir-num">04 / 04</span>
+        <svg class="dir-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </div>
+      <div class="dir-title">Коммуникация и партнёрства</div>
+      <div class="dir-desc">АРК помогает выстраивать взаимодействие между организациями, экспертами и проектными командами. От первых переговоров и поиска партнёров до формирования совместных инициатив и рабочих форматов.</div>
+      <div class="dir-tags-list">
+        <span class="dir-tag">Партнёрства</span>
+        <span class="dir-tag">Госпартнёрства</span>
+        <span class="dir-tag">Образование</span>
+        <span class="dir-tag">Институции</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROJECTS
+     ============================================================ -->
+<section id="projects">
+  <!-- Radar chart bg -->
+  <div class="bg-layer bg-chart" style="top:5%;right:1%;width:30%;height:40%;opacity:0.022;filter:blur(0.7px);z-index:0">
+    <svg width="100%" height="100%" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="150,20 260,90 220,210 80,210 40,90" fill="none" stroke="#aaa" stroke-width="0.8"/>
+      <polygon points="150,55 230,108 200,192 100,192 70,108" fill="none" stroke="#aaa" stroke-width="0.6"/>
+      <polygon points="150,90 200,126 180,174 120,174 100,126" fill="none" stroke="#aaa" stroke-width="0.5"/>
+      <polygon points="150,120 175,140 165,165 135,165 125,140" fill="#aaa" fill-opacity="0.12" stroke="#aaa" stroke-width="0.6"/>
+      <line x1="150" y1="20" x2="150" y2="210" stroke="#aaa" stroke-width="0.4"/>
+      <line x1="260" y1="90" x2="40" y2="90" stroke="#aaa" stroke-width="0.4"/>
+      <line x1="220" y1="210" x2="80" y2="210" stroke="#aaa" stroke-width="0.4"/>
+    </svg>
+  </div>
+
+  <div class="projects-header reveal">
+    <div>
+      <div class="s-label">Кейсы и инициативы</div>
+      <h2 class="s-title">Проекты <em>АРК</em></h2>
+    </div>
+    <div class="projects-header-right">
+      <span class="projects-header-right-line">От цифровых музеев до федеральных карьерных инициатив</span>
+      <span class="projects-header-right-line">Реальные работающие проекты</span>
+    </div>
+  </div>
+
+  <div class="projects-group reveal">
+    <h3 class="projects-group-title">Основные проекты / партнёрские инициативы</h3>
+    <div class="proj-grid">
+      <!-- Агент.Метрика -->
+      <div class="proj-card span-4" onclick="openModal('proj2')">
+        <div class="proj-status-row"><span class="proj-cat">Аналитика</span>
+        </div>
+        <h3 class="proj-title">«Агент.Метрика»</h3>
+        <p class="proj-desc">Интеллектуальный аналитический сервис для учреждений культуры, науки, образования и цифровых архивов.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Аналитика</span>
+          <span class="proj-tag">Культура</span>
+          <span class="proj-tag">События</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">02</div>
+      </div>
+
+      <!-- Выборг -->
+      <div class="proj-card span-8" onclick="openModal('proj4')">
+        <div class="proj-status-row"><span class="proj-cat">Территории · Туризм</span>
+        </div>
+        <h3 class="proj-title">Концепции развития Выборга и Выборгского района</h3>
+        <p class="proj-desc">Стратегические концепции туристического развития с планами реализации, инфраструктурой и партнёрской моделью.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Туризм</span>
+          <span class="proj-tag">Территории</span>
+          <span class="proj-tag">Стратегия</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">08</div>
+      </div>
+
+      <!-- Частный музей -->
+      <div class="proj-card span-5" onclick="openModal('proj_museum_private')">
+        <div class="proj-status-row"><span class="proj-cat">Культура · Систематизация</span>
+        </div>
+        <h3 class="proj-title">Развитие частного музея</h3>
+        <p class="proj-desc">Комплексный проект по инвентаризации, цифровому учёту и развитию музея в Калининградской области.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Инвентаризация</span>
+          <span class="proj-tag">Фонды</span>
+          <span class="proj-tag">Безопасность</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">04</div>
+      </div>
+
+      <!-- Индустриальный музей -->
+      <div class="proj-card span-7" onclick="openModal('proj3')">
+        <div class="proj-status-row"><span class="proj-cat">Культура · Наследие</span>
+        </div>
+        <h3 class="proj-title">Индустриальный музей Красногвардейского района</h3>
+        <p class="proj-desc">Цифровой историко-культурный проект о промышленном наследии района и архивных материалах.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Цифровой музей</span>
+          <span class="proj-tag">Наследие</span>
+          <span class="proj-tag">История</span>
+        </div>
+        <button class="proj-more-btn">Смотреть кейс →</button>
+        <div class="proj-num-bg">03</div>
+      </div>
+
+      <!-- Сохранение -->
+      <div class="proj-card span-4" onclick="openModal('proj6')">
+        <div class="proj-status-row"><span class="proj-cat">Архивы · Партнёрства</span>
+        </div>
+        <h3 class="proj-title">Проект «Сохранение»</h3>
+        <p class="proj-desc">Систематизация архивных материалов и создание цифровых фондов для организаций и учреждений.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Архивы</span>
+          <span class="proj-tag">Цифровизация</span>
+          <span class="proj-tag">OCR</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">07</div>
+      </div>
+
+      <!-- Интеграция Яндекс-решений -->
+      <div class="proj-card span-4" onclick="openModal('proj_yandex_integration')">
+        <div class="proj-status-row"><span class="proj-cat">Федеральный уровень</span>
+        </div>
+        <h3 class="proj-title">Интеграция Яндекс-решений</h3>
+        <p class="proj-desc">Выстраивание сотрудничества федеральной организации с Яндексом по цифровым и AI-направлениям.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Партнёрство</span>
+          <span class="proj-tag">AI</span>
+          <span class="proj-tag">Интеграции</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">05</div>
+      </div>
+
+      <!-- КДЦ -->
+      <div class="proj-card span-4" onclick="openModal('proj_kdc')">
+        <div class="proj-status-row"><span class="proj-cat">Культурные проекты</span>
+        </div>
+        <h3 class="proj-title">КДЦ Красногвардейского района</h3>
+        <p class="proj-desc">Аналитика и концептуальное развитие культурных, просветительских и digital-форматов центра.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Концепции</span>
+          <span class="proj-tag">Культура</span>
+          <span class="proj-tag">Районные проекты</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">06</div>
+      </div>
+
+      <!-- Окно в будущее -->
+      <div class="proj-card span-8" onclick="openModal('proj1')">
+        <div class="proj-status-row"><span class="proj-cat">Карьера · Федеральный уровень · Образовательные технологии</span>
+        </div>
+        <h3 class="proj-title">«Окно в будущее»</h3>
+        <p class="proj-desc">Федеральная инициатива по карьерной навигации и взаимодействию студентов, вузов и работодателей. Включает ПрофиТрек, цифровые решения для стажировок и карьерной ориентации молодёжи.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">ПрофиТрек</span>
+          <span class="proj-tag">Карьерная навигация</span>
+          <span class="proj-tag">Стажировки</span>
+          <span class="proj-tag">Образовательные технологии</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">01</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="projects-group reveal">
+    <h3 class="projects-group-title">Digital / AI-системы</h3>
+    <div class="proj-grid">
+      <!-- Студия рассылок -->
+      <div class="proj-card span-5" onclick="openModal('proj_studio')">
+        <div class="proj-status-row"><span class="proj-cat">Digital · Контент</span>
+        </div>
+        <h3 class="proj-title">Студия рассылок</h3>
+        <p class="proj-desc">Веб-сервис для автоматического создания email-рассылок и постов на основе контента сайтов организаций.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Web-продукт</span>
+          <span class="proj-tag">Типизированный стек</span>
+          <span class="proj-tag">Email</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">01</div>
+      </div>
+
+      <!-- Архив.Карточка -->
+      <div class="proj-card span-7" onclick="openModal('proj_archive_card')">
+        <div class="proj-status-row"><span class="proj-cat">Архивы · Каталогизация</span>
+        </div>
+        <h3 class="proj-title">Архив.Карточка</h3>
+        <p class="proj-desc">OCR-сервис автоматической каталогизации архивных документов и формирования карточек фондов.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">OCR</span>
+          <span class="proj-tag">Метаданные</span>
+          <span class="proj-tag">Архивы</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">02</div>
+      </div>
+
+      <!-- ПрофиТрек -->
+      <div class="proj-card span-4" onclick="openModal('proj_profitrek')">
+        <div class="proj-status-row"><span class="proj-cat">Карьера · Навигация</span>
+        </div>
+        <h3 class="proj-title">ПрофиТрек</h3>
+        <p class="proj-desc">Цифровой AI-навигатор стажировок и карьерного старта для студентов и молодых специалистов.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">AI</span>
+          <span class="proj-tag">Карьера</span>
+          <span class="proj-tag">Стажировки</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">03</div>
+      </div>
+
+      <!-- Рабочий Компас -->
+      <div class="proj-card span-4" onclick="openModal('proj5')">
+        <div class="proj-status-row"><span class="proj-cat">Digital · Организации</span>
+        </div>
+        <h3 class="proj-title">«Рабочий Компас»</h3>
+        <p class="proj-desc">Цифровой навигатор для внутренних процессов организаций. Структурирование рабочих задач.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Для организаций</span>
+          <span class="proj-tag">Навигатор</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">04</div>
+      </div>
+
+      <!-- Российское общество Знание -->
+      <div class="proj-card span-4" onclick="openModal('proj_znanie')">
+        <div class="proj-status-row"><span class="proj-cat">Digital · Образование</span>
+        </div>
+        <h3 class="proj-title">Российское общество «Знание»</h3>
+        <p class="proj-desc">Лекции, образовательные материалы и просветительские форматы по AI и цифровым технологиям.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Лекции</span>
+          <span class="proj-tag">AI</span>
+          <span class="proj-tag">Просвещение</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">06</div>
+      </div>
+
+      <!-- Эксперт форума Сильные идеи -->
+      <div class="proj-card span-4" onclick="openModal('proj_strong_ideas')">
+        <div class="proj-status-row"><span class="proj-cat">Экспертиза · Проекты</span>
+        </div>
+        <h3 class="proj-title">Эксперт форума «Сильные идеи для нового времени» (АСИ, Росконгресс)</h3>
+        <p class="proj-desc">Экспертиза проектов в сферах образования, цифровых решений, социальных инициатив и развития территорий.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Экспертиза</span>
+          <span class="proj-tag">Образование</span>
+          <span class="proj-tag">Digital</span>
+          <span class="proj-tag">Территории</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">07</div>
+      </div>
+
+      <!-- Яндекс Практикум -->
+      <div class="proj-card span-4" onclick="openModal('proj_practicum')">
+        <div class="proj-status-row"><span class="proj-cat">AI · LLM</span>
+        </div>
+        <h3 class="proj-title">Яндекс Практикум</h3>
+        <p class="proj-desc">Разработка учебных материалов по AI, LLM и практическому применению цифровых инструментов.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">AI</span>
+          <span class="proj-tag">LLM</span>
+          <span class="proj-tag">Обучение</span>
+        </div>
+        <button class="proj-more-btn">Подробнее →</button>
+        <div class="proj-num-bg">05</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXTRA DIRECTIONS
+     ============================================================ -->
+<section id="extra" style="padding-top:80px">
+  <div class="s-label">Дополнительно</div>
+  <h2 class="s-title reveal">Области <em>экспертизы</em></h2>
+
+  <div class="ticker-outer">
+    <div class="ticker-track" id="tickerTrack">
+      <span class="ticker-item">Фестивальные digital-проекты <span class="ticker-sep"></span></span>
+      <span class="ticker-item">Музейная навигация <span class="ticker-sep"></span></span>
+      <span class="ticker-item">Библиотечная логистика <span class="ticker-sep"></span></span>
+      <span class="ticker-item">AI и образование <span class="ticker-sep"></span></span>
+      <span class="ticker-item">Событийные концепции <span class="ticker-sep"></span></span>
+      <span class="ticker-item">Общественные пространства <span class="ticker-sep"></span></span>
+      <span class="ticker-item">Аналитика пользовательского опыта <span class="ticker-sep"></span></span>
+      <span class="ticker-item">Межорганизационные инициативы <span class="ticker-sep"></span></span>
+      <span class="ticker-item">Фестивальные digital-проекты <span class="ticker-sep"></span></span>
+      <span class="ticker-item">Музейная навигация <span class="ticker-sep"></span></span>
+      <span class="ticker-item">Библиотечная логистика <span class="ticker-sep"></span></span>
+      <span class="ticker-item">AI и образование <span class="ticker-sep"></span></span>
+      <span class="ticker-item">Событийные концепции <span class="ticker-sep"></span></span>
+      <span class="ticker-item">Общественные пространства <span class="ticker-sep"></span></span>
+      <span class="ticker-item">Аналитика пользовательского опыта <span class="ticker-sep"></span></span>
+      <span class="ticker-item">Межорганизационные инициативы <span class="ticker-sep"></span></span>
+    </div>
+  </div>
+
+  <div class="extra-grid reveal">
+    <div class="extra-card" onclick="openModal('exp1')">
+      <div class="extra-card-num">01 · Культура</div>
+      <div class="extra-card-title">Фестивали и события</div>
+      <div class="extra-card-desc">Digital-сопровождение фестивальных и событийных проектов</div>
+    </div>
+    <div class="extra-card" onclick="openModal('exp2')">
+      <div class="extra-card-num">02 · Музеи</div>
+      <div class="extra-card-title">Музейная навигация</div>
+      <div class="extra-card-desc">Цифровые навигаторы и UX для музейных пространств</div>
+    </div>
+    <div class="extra-card" onclick="openModal('exp3')">
+      <div class="extra-card-num">03 · AI</div>
+      <div class="extra-card-title">AI и образование</div>
+      <div class="extra-card-desc">Применение AI-инструментов в образовательных инициативах</div>
+    </div>
+    <div class="extra-card" onclick="openModal('exp4')">
+      <div class="extra-card-num">04 · UX</div>
+      <div class="extra-card-title">Аналитика UX</div>
+      <div class="extra-card-desc">Исследование пользовательского опыта для digital-продуктов</div>
+    </div>
+    <div class="extra-card" onclick="openModal('exp5')">
+      <div class="extra-card-num">05 · Библиотеки</div>
+      <div class="extra-card-title">Библиотечная логистика</div>
+      <div class="extra-card-desc">Системы организации и навигации для библиотек</div>
+    </div>
+    <div class="extra-card" onclick="openModal('exp6')">
+      <div class="extra-card-num">06 · Среда</div>
+      <div class="extra-card-title">Общественные пространства</div>
+      <div class="extra-card-desc">Концепции развития и активации городских пространств</div>
+    </div>
+    <div class="extra-card" onclick="openModal('exp7')">
+      <div class="extra-card-num">07 · Партнёрства</div>
+      <div class="extra-card-title">Межорганизационные связи</div>
+      <div class="extra-card-desc">Проекты на стыке нескольких организаций и институций</div>
+    </div>
+    <div class="extra-card" onclick="openModal('exp8')">
+      <div class="extra-card-num">08 · События</div>
+      <div class="extra-card-title">Событийные концепции</div>
+      <div class="extra-card-desc">Разработка форматов для событийных и культурных проектов</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     APPROACH
+     ============================================================ -->
+<section id="approach">
+  <div class="s-label">Как устроена работа</div>
+  <div class="approach-layout">
+    <div class="approach-sidebar reveal">
+      <h2 class="s-title" style="font-size:clamp(28px,3vw,40px);margin-bottom:24px">Подход <em>к проектам</em></h2>
+      <div class="approach-sidebar-note">
+        Системная работа от первого анализа до передачи готового решения.<br>
+        Практический подход и конкретный результат.
+      </div>
+      <div class="approach-sidebar-meta">
+        <ul class="approach-sidebar-meta-list">
+          <li>Методология АРК</li>
+          <li>6 этапов работы</li>
+          <li>Проектная дисциплина</li>
+          <li>Реальная аналитика</li>
+        </ul>
+      </div>
+    </div>
+    <div class="approach-steps reveal reveal-d1">
+      <div class="step-item">
+        <div class="step-n">01</div>
+        <div class="step-content">
+          <div class="step-title">Анализ ситуации</div>
+          <div class="step-desc">Изучаем контекст, существующие ограничения и точки входа. Смотрим на ситуацию честно — без лишнего оптимизма и без паники.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-n">02</div>
+        <div class="step-content">
+          <div class="step-title">Структурирование</div>
+          <div class="step-desc">Раскладываем задачу по составным частям. Находим, что главное, что второстепенное, и где скрыты возможности для роста.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-n">03</div>
+        <div class="step-content">
+          <div class="step-title">Точки роста</div>
+          <div class="step-desc">Выявляем конкретные зоны, где можно получить реальный эффект. Ищем нетривиальные решения, которые вписываются в контекст.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-n">04</div>
+        <div class="step-content">
+          <div class="step-title">Проектная логика</div>
+          <div class="step-desc">Формируем структуру проекта: этапы, ресурсы, ключевые решения. Не «дорожная карта ради карты», а реальный инструмент.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-n">05</div>
+        <div class="step-content">
+          <div class="step-title">Упаковка решения</div>
+          <div class="step-desc">Преобразуем проектную логику в понятный рабочий формат: презентацию, концепцию, цифровой прототип, аналитический материал или другой инструмент для дальнейшей реализации.</div>
+        </div>
+      </div>
+      <div class="step-item" style="border-bottom:none">
+        <div class="step-n">06</div>
+        <div class="step-content">
+          <div class="step-title">Рекомендации и внедрение</div>
+          <div class="step-desc">Передаём готовое решение с ясными рекомендациями по дальнейшей работе. При необходимости — сопровождаем внедрение.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA
+     ============================================================ -->
+<section id="cta">
+  <div class="cta-grid">
+    <div class="cta-left reveal">
+      <div class="cta-label">Начать диалог</div>
+      <h2 class="cta-title">Ознакомительный <em>разбор</em></h2>
+      <div class="cta-body">
+        <p>Если есть идея, проект или пространство, которое хочется развить — <em>готовы обсудить.</em></p>
+        <p>Короткий экспресс-разбор: смотрим на ситуацию вместе, честно и по существу</p>
+        <p>Подходит для культурных инициатив, digital-продуктов, территориальных концепций — любых проектов, где нужен свежий взгляд и системная работа.</p>
+      </div>
+      <div class="cta-note">
+        Возможность быстро оценить идею, увидеть сильные и слабые стороны проекта и понять, есть ли смысл двигаться дальше
+      </div>
+    </div>
+    <div class="cta-form reveal reveal-d1">
+      <div class="cta-form-title">Написать в АРК</div>
+      <div class="cta-form-sub">Ответим в течение дня</div>
+      <div class="form-row">
+        <label>Имя</label>
+        <input type="text" id="f-name" placeholder="Имя и фамилия">
+      </div>
+      <div class="form-row">
+        <label>Контакт</label>
+        <input type="text" id="f-contact" placeholder="Telegram или email">
+      </div>
+      <div class="form-row">
+        <label>Тип проекта</label>
+        <select id="f-type">
+          <option value="">Выберите направление</option>
+          <option>Культурный / событийный проект</option>
+          <option>Digital-решение / платформа</option>
+          <option>Территориальная концепция</option>
+          <option>Аналитика / исследование</option>
+          <option>Партнёрская инициатива</option>
+          <option>Другое</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>О проекте</label>
+        <textarea id="f-message" placeholder="Коротко — что хотите обсудить?"></textarea>
+      </div>
+      <button class="form-submit" id="formBtn" onclick="submitForm()">Отправить заявку</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACTS
+     ============================================================ -->
+<section id="contacts">
+  <div class="s-label">Связь</div>
+  <h2 class="s-title reveal">Контакты</h2>
+  <div class="contacts-grid reveal">
+    <div class="contact-card">
+      <div class="contact-card-content">
+        <div class="contact-card-type">ТЕЛЕГРАМ</div>
+        <div class="contact-card-val"><a href="https://t.me/Andrey_M_Petrov">@Andrey_M_Petrov</a></div>
+        <div class="contact-card-hint">Основной канал связи. Отвечаем оперативно.</div>
+      </div>
+      <div class="contact-card-visual">
+        <div class="contact-card-qr"><img src="assets/QR.jpg" alt="QR-код Telegram"></div>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-card-content">
+        <div class="contact-card-type">ПОЧТА</div>
+        <div class="contact-card-val"><a href="mailto:petrov_nlr@mail.ru">petrov_nlr@mail.ru</a></div>
+        <div class="contact-card-hint">Для официальных запросов, документов и предложений о сотрудничестве</div>
+      </div>
+      <div class="contact-card-visual">
+        <img class="contact-card-logo" src="assets/logos/big logo.png" alt="Логотип АРК">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo-wrap">
+      <img class="footer-logo-svg" src="assets/logos/logo orange.svg" alt="Логотип АРК">
+      <div class="footer-logo-text-block">
+        <div class="footer-logo-name">АРК</div>
+        <div class="footer-logo-tag">Аналитика · Развитие · Культура</div>
+      </div>
+    </div>
+    <ul class="footer-nav-links">
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#directions">Направления</a></li>
+      <li><a href="#projects">Проекты</a></li>
+      <li><a href="#approach">Подход</a></li>
+    </ul>
+    <div class="footer-quote">
+      <blockquote>«Сделать можно всё — главное начать»</blockquote>
+      <cite>Андрей М. Петров</cite>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 АРК — Авторское направление Андрея Петрова</div>
+    <div class="footer-copy">Аналитика · Развитие · Культура</div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     MODALS DATA
+     ============================================================ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
+  <div class="modal-box" id="modalBox">
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <div class="modal-h-cat" id="mCat"></div>
+        <div class="modal-h-title" id="mTitle"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc" id="mDesc"></p>
+      <div id="mFeatBlock" style="display:none">
+        <div class="modal-features" id="mFeatures"></div>
+      </div>
+      <div class="modal-tags" id="mTags"></div>
+      <div class="modal-cta-row">
+        <span class="modal-cta-text" id="mCtaText"></span>
+        <a href="#cta" class="modal-btn" onclick="closeModal()">Обсудить →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,63 @@
+/* =========================================
+   FOOTER
+   ========================================= */
+footer{
+  background:var(--bg);
+  border-top:1px solid var(--line);
+  padding:48px 60px 36px;
+}
+.footer-top{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:60px;
+  align-items:center;
+  padding-bottom:36px;
+  border-bottom:1px solid var(--border);
+  margin-bottom:28px;
+}
+.footer-logo-wrap{display:flex;align-items:center;gap:14px}
+.footer-logo-svg{width:36px;height:36px}
+.footer-logo-text-block{}
+.footer-logo-name{
+  font-family:'Manrope',sans-serif;
+  font-size:11px;font-weight:700;
+  letter-spacing:5px;text-transform:uppercase;
+  color:var(--text);margin-bottom:2px;
+}
+.footer-logo-tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--text3);
+}
+.footer-nav-links{
+  display:flex;gap:24px;
+  justify-content:center;
+  list-style:none;
+}
+.footer-nav-links a{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--text3);text-decoration:none;transition:color 0.2s;
+  white-space:nowrap;
+}
+.footer-nav-links a:hover{color:var(--text2)}
+.footer-quote{text-align:right;max-width:300px}
+.footer-quote blockquote{
+  font-family:'PT Serif',serif;
+  font-size:15px;font-style:italic;
+  color:var(--text2);line-height:1.6;
+  margin-bottom:6px;
+}
+.footer-quote cite{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--text3);font-style:normal;
+}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+}
+.footer-copy{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--text4);
+}

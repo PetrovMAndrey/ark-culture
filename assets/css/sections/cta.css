@@ -1,0 +1,81 @@
+/* =========================================
+   CTA (Consultation)
+   ========================================= */
+#cta{
+  background:var(--bg);
+  padding:100px 60px;
+  position:relative;overflow:hidden;
+}
+.cta-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+.cta-left{}
+.cta-label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--accent);margin-bottom:14px;
+  display:flex;align-items:center;gap:8px;
+}
+.cta-label::before{content:'';display:block;width:20px;height:1px;background:var(--accent)}
+.cta-title{
+  font-family:'PT Serif',serif;
+  font-size:clamp(32px,3.5vw,48px);
+  font-weight:400;line-height:1.1;
+  color:var(--text);margin-bottom:24px;
+  letter-spacing:-0.3px;
+}
+.cta-title em{font-style:italic;color:var(--text2)}
+.cta-body p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:14px}
+.cta-body p em{color:var(--accent-hi);font-style:normal;font-weight:600}
+.cta-note{
+  margin-top:28px;
+  padding:16px 20px;
+  border-left:2px solid var(--accent);
+  background:var(--accent-dim);
+  font-size:13px;color:var(--text2);line-height:1.6;
+}
+.cta-form{
+  background:var(--bg3);
+  border:1px solid var(--line);
+  padding:36px;
+}
+.cta-form-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px}
+.cta-form-sub{font-size:12px;color:var(--text3);margin-bottom:28px;letter-spacing:0.3px}
+.form-row{margin-bottom:18px}
+.form-row label{
+  display:block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--text3);margin-bottom:7px;
+}
+.form-row input,.form-row textarea,.form-row select{
+  width:100%;
+  background:var(--bg4);
+  border:1px solid var(--border);
+  padding:11px 14px;
+  color:var(--text);
+  font-size:14px;
+  font-family:'Manrope',sans-serif;
+  outline:none;
+  transition:border-color 0.2s;
+  appearance:none;
+}
+.form-row input:focus,.form-row textarea:focus,.form-row select:focus{border-color:var(--accent-border)}
+.form-row input::placeholder,.form-row textarea::placeholder{color:var(--text4)}
+.form-row textarea{resize:vertical;min-height:80px;line-height:1.6}
+.form-row select option{background:var(--bg3)}
+.form-submit{
+  width:100%;
+  background:var(--accent);color:#fff;
+  border:none;padding:13px;
+  font-size:11px;font-weight:700;
+  cursor:pointer;letter-spacing:2px;
+  text-transform:uppercase;
+  font-family:'Manrope',sans-serif;
+  transition:background 0.2s;
+}
+.form-submit:hover{background:var(--accent-hi)}
+.form-submit.sent{background:#2d6a4a}

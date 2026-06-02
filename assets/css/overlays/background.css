@@ -1,0 +1,11 @@
+/* =========================================
+   BACKGROUND OVERLAY SYSTEM
+   ========================================= */
+.bg-layer{position:absolute;pointer-events:none;user-select:none;overflow:hidden}
+/* SVG-based analytical background drawings */
+.bg-chart{opacity:0.028;filter:blur(0.4px)}
+.bg-plan{opacity:0.022;filter:blur(0.6px)}
+.bg-table{opacity:0.03;filter:blur(0.3px)}
+.bg-code{opacity:0.035;filter:blur(0.2px)}
+.bg-fade-left{-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,0.6) 30%,rgba(0,0,0,0.8) 60%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,0.6) 30%,rgba(0,0,0,0.8) 60%,transparent 100%)}
+.bg-fade-top{-webkit-mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.7) 25%,rgba(0,0,0,0.9) 60%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.7) 25%,rgba(0,0,0,0.9) 60%,transparent 100%)}
