@@ -50,6 +50,13 @@
   font-size:26px;font-weight:400;
   color:var(--text);line-height:1.2;
 }
+.modal-h-subtitle{
+  max-width:560px;
+  margin-top:7px;
+  font-size:13px;
+  line-height:1.5;
+  color:var(--text2);
+}
 .modal-close{
   width:44px;height:44px;flex-shrink:0;
   background:var(--accent);border:1px solid transparent;
@@ -85,6 +92,14 @@
   content:'—';color:var(--accent);flex-shrink:0;
   margin-top:2px;font-family:'JetBrains Mono',monospace;
   font-size:12px;
+}
+.modal-quote{
+  margin:14px 0 10px;
+  font-family:'PT Serif',serif;
+  font-size:22px;
+  font-style:italic;
+  line-height:1.45;
+  color:var(--text);
 }
 .modal-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
 .modal-tag{

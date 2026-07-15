@@ -143,6 +143,24 @@ const modalData = {
     cta:'Есть идея события, которую нужно оформить в проект?'
   },
 
+  proj_grantmaster:{
+    cat:'Флагманский продукт · Проектирование инициатив',
+    title:'Грантмастер',
+    subtitle:'Интеллектуальный помощник по разработке проектов и инициатив',
+    desc:'Грантмастер — интерактивный инструмент, который помогает структурировать идею, выстроить проектную логику и подготовить основу для качественной разработки проекта или конкурсной заявки.',
+    intro:'Сервис не пишет проект за автора — он помогает понять, как должен быть построен сильный проект с точки зрения экспертной оценки.',
+    sections:[
+      {title:'Возможности',items:['Первичная диагностика зрелости проекта','Пошаговое проектирование по 16 тематическим разделам','Проверка логики проекта от проблемы до ожидаемых результатов','Интерактивные элементы, сокращающие объём ручного ввода','Подготовка структурированной основы для проектной документации, конкурсных заявок и инициатив','Формирование итогового паспорта проекта и рабочего описания']},
+      {title:'Для кого',items:['Авторы социальных проектов','Учреждения культуры','Образовательные организации','Некоммерческие организации','Инициативные граждане','Муниципальные команды','Участники грантовых конкурсов','Все, кто разрабатывает новые проекты и инициативы']},
+      {title:'Особенности',items:['Универсальная проектная логика без привязки к одному конкурсу','До 70% действий выполняется через выбор готовых вариантов','Проектная логика сформирована на основе методических материалов ведущих грантовых программ и практики экспертной оценки проектов','Полностью работает в браузере и не требует установки дополнительного программного обеспечения']}
+    ],
+    quote:'«Сначала поймите проект. Потом готовьте заявку.»',
+    tags:['Проектная логика','Диагностика','Грантовые заявки'],
+    actionLabel:'Открыть Грантмастер ↗',
+    actionHref:'https://грант-мастер.рф/',
+    actionExternal:true
+  },
+
   proj1:{
     cat:'Кейс · Основные проекты',
     title:'«Окно в будущее»',
@@ -366,11 +384,15 @@ const modalData = {
   }
 };
 
-function renderModalSections(desc, sections, introTitle) {
+function renderModalSections(desc, sections, introTitle, introAdditional = '', quote = '') {
+  const introItems = [desc, introAdditional]
+    .filter(Boolean)
+    .map(item => `<div class="modal-feature">${item}</div>`)
+    .join('');
   const introBlock = `
     <div class="modal-case-block">
       <div class="modal-case-title">${introTitle}</div>
-      <div class="modal-feature">${desc}</div>
+      ${introItems}
     </div>
   `;
 
@@ -384,7 +406,9 @@ function renderModalSections(desc, sections, introTitle) {
     `;
   }).join('');
 
-  return introBlock + sectionBlocks;
+  const quoteBlock = quote ? `<blockquote class="modal-quote">${quote}</blockquote>` : '';
+
+  return introBlock + sectionBlocks + quoteBlock;
 }
 
 function openModal(id) {
@@ -399,6 +423,9 @@ function openModal(id) {
 
   document.getElementById('mCat').textContent = d.cat;
   document.getElementById('mTitle').textContent = d.title;
+  const subtitleEl = document.getElementById('mSubtitle');
+  subtitleEl.textContent = d.subtitle || '';
+  subtitleEl.style.display = d.subtitle ? '' : 'none';
   const descEl = document.getElementById('mDesc');
   descEl.textContent = d.desc;
 
@@ -409,7 +436,9 @@ function openModal(id) {
     document.getElementById('mFeatures').innerHTML = renderModalSections(
       d.desc,
       d.sections,
-      isExpertiseCard ? 'Описание направления' : 'Краткое описание проекта'
+      isExpertiseCard ? 'Описание направления' : 'Краткое описание проекта',
+      d.intro,
+      d.quote
     );
   } else if (d.feats && d.feats.length) {
     descEl.style.display = '';
@@ -427,6 +456,16 @@ function openModal(id) {
 
   document.getElementById('mTags').innerHTML = (d.tags || []).map(t => `<span class="modal-tag">${t}</span>`).join('');
   document.getElementById('mCtaText').textContent = d.cta || '';
+  const actionEl = document.getElementById('mAction');
+  actionEl.textContent = d.actionLabel || 'Обсудить →';
+  actionEl.href = d.actionHref || '#cta';
+  if (d.actionExternal) {
+    actionEl.target = '_blank';
+    actionEl.rel = 'noopener noreferrer';
+  } else {
+    actionEl.removeAttribute('target');
+    actionEl.removeAttribute('rel');
+  }
 
   const ov = document.getElementById('modalOverlay');
   ov.classList.add('open');

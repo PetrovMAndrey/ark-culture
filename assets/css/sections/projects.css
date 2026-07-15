@@ -43,6 +43,7 @@
     linear-gradient(135deg,rgba(212,96,10,0.62) 0%,rgba(212,96,10,0.26) 38%,rgba(212,96,10,0.08) 68%,rgba(212,96,10,0) 100%) border-box;
   border:1px solid transparent;
   border-radius:24px;
+  cursor:pointer;
 }
 .grantmaster-content{
   grid-area:content;
@@ -199,7 +200,7 @@
   align-self:end;
   justify-self:start;
   margin-top:0;
-  cursor:default;
+  cursor:pointer;
 }
 .grantmaster-action:hover{gap:6px}
 /* Masonry-like grid */

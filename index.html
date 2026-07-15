@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>АРК — Аналитика · Развитие · Культура</title>
+<title>АРК — Анализ · Развитие · Культура</title>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -92,7 +92,7 @@
     <div class="hero-title-block">
       <div class="hero-eyebrow">АРК</div>
       <h1 class="hero-h1">
-        Аналитика.<br>
+        Анализ.<br>
         Развитие.<br>
         <em>Культура.</em>
       </h1>
@@ -158,7 +158,7 @@
       <div class="about-pillars">
         <div class="pillar">
           <div class="pillar-letter">А</div>
-          <div class="pillar-name">Аналитика</div>
+          <div class="pillar-name">Анализ</div>
           <div class="pillar-desc">Исследование, структурирование, систематизация информации и процессов</div>
         </div>
         <div class="pillar">
@@ -272,7 +272,7 @@
 
   <div class="projects-group reveal">
     <h3 class="projects-group-title">Основные проекты / партнёрские инициативы</h3>
-    <article class="grantmaster-card">
+    <article class="grantmaster-card" onclick="openModal('proj_grantmaster')">
       <div class="grantmaster-content">
         <div class="grantmaster-label">Проектирование инициатив</div>
         <h3 class="grantmaster-title">Грантмастер</h3>
@@ -299,7 +299,7 @@
         <div class="grantmaster-status"><span></span>Рабочий прототип · Активная разработка</div>
       </div>
 
-      <span class="proj-more-btn grantmaster-action">Подробнее →</span>
+      <button type="button" class="proj-more-btn grantmaster-action">Подробнее →</button>
     </article>
     <div class="proj-grid">
       <!-- Агент.Метрика -->
@@ -735,7 +735,7 @@
         <div class="contact-card-hint">Для официальных запросов, документов и предложений о сотрудничестве</div>
       </div>
       <div class="contact-card-visual">
-        <img class="contact-card-logo" src="assets/logos/big logo.png" alt="Логотип АРК">
+        <img class="contact-card-logo" src="assets/logos/Logo Analiz.png" alt="Логотип АРК">
       </div>
     </div>
   </div>
@@ -750,7 +750,7 @@
       <img class="footer-logo-svg" src="assets/logos/logo orange.svg" alt="Логотип АРК">
       <div class="footer-logo-text-block">
         <div class="footer-logo-name">АРК</div>
-        <div class="footer-logo-tag">Аналитика · Развитие · Культура</div>
+        <div class="footer-logo-tag">Анализ · Развитие · Культура</div>
       </div>
     </div>
     <ul class="footer-nav-links">
@@ -766,7 +766,7 @@
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">© 2026 АРК — Авторское направление Андрея Петрова</div>
-    <div class="footer-copy">Аналитика · Развитие · Культура</div>
+    <div class="footer-copy">Анализ · Развитие · Культура</div>
   </div>
 </footer>
 
@@ -779,6 +779,7 @@
       <div class="modal-header-left">
         <div class="modal-h-cat" id="mCat"></div>
         <div class="modal-h-title" id="mTitle"></div>
+        <div class="modal-h-subtitle" id="mSubtitle"></div>
       </div>
       <button class="modal-close" onclick="closeModal()">✕</button>
     </div>
@@ -790,7 +791,7 @@
       <div class="modal-tags" id="mTags"></div>
       <div class="modal-cta-row">
         <span class="modal-cta-text" id="mCtaText"></span>
-        <a href="#cta" class="modal-btn" onclick="closeModal()">Обсудить →</a>
+        <a href="#cta" class="modal-btn" id="mAction" onclick="closeModal()">Обсудить →</a>
       </div>
     </div>
   </div>
@@ -799,4 +800,3 @@
 <script src="assets/js/site.js"></script>
 </body>
 </html>
-
