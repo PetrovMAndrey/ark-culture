@@ -8,6 +8,18 @@
   #hero .hero-bg-photo{width:66%;background-size:auto 100%;background-position:right center}
   .about-inner{grid-template-columns:1fr;gap:48px}
   .dir-grid{grid-template-columns:1fr}
+  .grantmaster-card{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "content"
+      "visual"
+      "action";
+    grid-template-rows:auto;
+    gap:20px;
+    min-height:0;
+    padding:26px 28px;
+  }
+  .grantmaster-visual{min-height:250px}
   .proj-card.span-8,.proj-card.span-4,.proj-card.span-6,.proj-card.span-5,.proj-card.span-7,.proj-card.span-12{grid-column:span 12}
   .proj-grid{grid-template-columns:1fr}
   .approach-layout{grid-template-columns:1fr;gap:40px}
@@ -43,6 +55,37 @@
   .contact-card{border:1px solid var(--border);gap:18px}
   .contact-card-qr{width:104px;height:104px}
   .contact-card-logo{width:132px}
+  .grantmaster-card{
+    gap:18px;
+    padding:20px;
+  }
+  .grantmaster-title{font-size:clamp(34px,11vw,44px)}
+  .grantmaster-subtitle{font-size:15px;line-height:1.5}
+  .grantmaster-desc{font-size:14px;line-height:1.65}
+  .grantmaster-visual{
+    min-height:0;
+    padding:20px 18px;
+  }
+  .grantmaster-visual-title{font-size:24px}
+  .grantmaster-logic{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .grantmaster-logic-item{
+    position:relative;
+    padding:9px 12px;
+    font-size:10px;
+  }
+  .grantmaster-logic-item:not(:last-child)::after{
+    content:'↓';
+    top:auto;
+    right:auto;
+    left:50%;
+    bottom:-17px;
+    transform:translateX(-50%);
+    color:#b44f08;
+  }
+  .grantmaster-status{align-items:flex-start}
   .projects-header{grid-template-columns:1fr;gap:24px}
   .projects-header > div:first-child,
   .projects-header-right{grid-column:1}
