@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Цифровые продукты и программные инструменты АРК.">
+<title>Приложения АРК — Цифровые продукты</title>
+
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logos/logo 32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/logos/logo 64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/base/base.css">
+<link rel="stylesheet" href="../assets/css/layout/navigation.css">
+<link rel="stylesheet" href="../assets/css/layout/common.css">
+<link rel="stylesheet" href="../assets/css/sections/footer.css">
+<link rel="stylesheet" href="../assets/css/components/animations.css">
+<link rel="stylesheet" href="../assets/css/components/scroll.css">
+<link rel="stylesheet" href="../assets/css/pages/apps.css">
+</head>
+<body class="apps-page">
+
+<div class="scroll-progress" id="scrollBar"></div>
+
+<nav id="mainNav">
+  <a href="/#hero" class="nav-logo-wrap" aria-label="АРК — на главную">
+    <img class="nav-logo-svg" src="../assets/logos/logo orange.svg" alt="Логотип АРК">
+    <span class="nav-logo-text">АРК</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#about">О нас</a></li>
+    <li><a href="/#directions">Направления</a></li>
+    <li><a href="/#projects">Проекты</a></li>
+    <li><a class="nav-apps-link active" href="/apps" aria-current="page">Приложения</a></li>
+    <li><a href="/#approach">Подход</a></li>
+    <li><a href="/#contacts">Контакты</a></li>
+  </ul>
+  <a href="/#cta" class="nav-cta">Обсудить проект</a>
+  <button class="burger" id="burgerBtn" type="button" aria-label="Открыть меню" aria-controls="mobileMenu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/#about">О нас</a>
+  <a href="/#directions">Направления</a>
+  <a href="/#projects">Проекты</a>
+  <a class="mobile-apps-link active" href="/apps" aria-current="page">Приложения</a>
+  <a href="/#approach">Подход</a>
+  <a href="/#cta">Обсудить проект</a>
+  <a href="/#contacts">Контакты</a>
+</div>
+
+<main>
+  <section class="apps-intro" aria-labelledby="appsPageTitle">
+    <div class="apps-intro-inner reveal">
+      <div class="s-label">Приложения АРК</div>
+      <h1 class="apps-page-title" id="appsPageTitle">Цифровые <em>продукты</em></h1>
+      <p class="apps-page-desc">Собственные программные продукты и инструменты АРК для практических задач, рабочих процессов и прямого взаимодействия.</p>
+    </div>
+  </section>
+
+  <section class="apps-products" aria-label="Приложения АРК">
+    <article class="sova-product reveal" id="sova">
+      <div class="sova-marker">Приложение <span>•</span> Android + Windows</div>
+      <h2 class="sova-title">Сова</h2>
+      <p class="sova-tagline">Передавайте файлы напрямую между своими устройствами</p>
+      <p class="sova-description">Файлы, папки, фотографии, видео и текст — напрямую между Android и Windows по локальной сети. Без облака, регистрации и загрузки файлов на внешние серверы.</p>
+
+      <div class="sova-visual" aria-label="Прямая передача файлов между Android и Windows">
+        <div class="sova-network" aria-hidden="true">
+          <span class="network-orbit network-orbit-one"></span>
+          <span class="network-orbit network-orbit-two"></span>
+          <span class="network-dot network-dot-one"></span>
+          <span class="network-dot network-dot-two"></span>
+          <span class="network-dot network-dot-three"></span>
+        </div>
+        <div class="sova-device sova-phone" aria-hidden="true">
+          <span class="sova-device-speaker"></span>
+          <span class="sova-device-screen"><span>Android</span></span>
+        </div>
+        <div class="sova-transfer-line sova-transfer-left" aria-hidden="true"><span></span></div>
+        <div class="sova-logo-stage">
+          <span class="sova-logo-halo" aria-hidden="true"></span>
+          <img src="../Logo_Sova.png" alt="Логотип приложения Сова">
+        </div>
+        <div class="sova-transfer-line sova-transfer-right" aria-hidden="true"><span></span></div>
+        <div class="sova-device sova-laptop" aria-hidden="true">
+          <span class="sova-device-screen"><span>Windows</span></span>
+          <span class="sova-laptop-base"></span>
+        </div>
+        <div class="sova-visual-caption">Прямая передача <span>·</span> Локальная сеть</div>
+      </div>
+
+      <div class="sova-routes" aria-label="Поддерживаемые направления передачи">
+        <span>Android → Android</span>
+        <span>Android → Windows</span>
+        <span>Windows → Android</span>
+        <span>Windows → Windows</span>
+      </div>
+
+      <div class="sova-benefits">
+        <div class="sova-benefit">
+          <span class="sova-benefit-mark" aria-hidden="true"></span>
+          <div><strong>Без облака</strong><p>Данные передаются напрямую между устройствами.</p></div>
+        </div>
+        <div class="sova-benefit">
+          <span class="sova-benefit-mark" aria-hidden="true"></span>
+          <div><strong>В локальной сети</strong><p>Передача по Wi-Fi/LAN.</p></div>
+        </div>
+        <div class="sova-benefit">
+          <span class="sova-benefit-mark" aria-hidden="true"></span>
+          <div><strong>Под вашим контролем</strong><p>Получатель подтверждает входящую передачу.</p></div>
+        </div>
+      </div>
+
+      <div class="sova-actions">
+        <!-- Future link target: /apps/sova -->
+        <span class="sova-cta sova-cta-primary">Подробнее о «Сове» →</span>
+        <!-- Future download target -->
+        <span class="sova-cta sova-cta-secondary">Скачать приложение</span>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo-wrap">
+      <img class="footer-logo-svg" src="../assets/logos/logo orange.svg" alt="Логотип АРК">
+      <div class="footer-logo-text-block">
+        <div class="footer-logo-name">АРК</div>
+        <div class="footer-logo-tag">Анализ · Развитие · Культура</div>
+      </div>
+    </div>
+    <ul class="footer-nav-links">
+      <li><a href="/#about">О нас</a></li>
+      <li><a href="/#directions">Направления</a></li>
+      <li><a href="/#projects">Проекты</a></li>
+      <li><a href="/apps" aria-current="page">Приложения</a></li>
+    </ul>
+    <div class="footer-quote">
+      <blockquote>«Сделать можно всё — главное начать»</blockquote>
+      <cite>Андрей М. Петров</cite>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 АРК — Авторское направление Андрея Петрова</div>
+    <div class="footer-copy">Анализ · Развитие · Культура</div>
+  </div>
+</footer>
+
+<script src="../assets/js/apps.js"></script>
+</body>
+</html>

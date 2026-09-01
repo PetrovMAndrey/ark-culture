@@ -3,6 +3,7 @@
    ========================================= */
 @media(max-width:1024px){
   nav{padding:0 32px}
+  .nav-links{gap:18px}
   section{padding:80px 32px}
   #hero .hero-content{padding:108px 32px 64px;max-width:680px}
   #hero .hero-bg-photo{width:66%;background-size:auto 100%;background-position:right center}
@@ -55,6 +56,11 @@
   .contact-card{border:1px solid var(--border);gap:18px}
   .contact-card-qr{width:104px;height:104px}
   .contact-card-logo{width:132px}
+  .hero-products{margin-top:42px}
+  .hero-products-grid{grid-template-columns:1fr}
+  .hero-product-card{min-height:112px;padding:15px 16px 14px}
+  .hero-product-topline{flex-wrap:wrap}
+  .hero-product-logo{width:28px;height:28px;flex-basis:28px}
   .grantmaster-card{
     gap:18px;
     padding:20px;

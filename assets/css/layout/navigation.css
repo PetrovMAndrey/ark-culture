@@ -18,6 +18,18 @@ nav.scrolled{background:rgba(13,13,12,0.97);border-bottom-color:var(--line)}
 .nav-links a{color:var(--text3);text-decoration:none;font-size:12px;letter-spacing:1px;font-weight:600;text-transform:uppercase;transition:color 0.2s;padding:4px 0;border-bottom:1px solid transparent;transition:all 0.2s}
 .nav-links a:hover{color:var(--text2);border-bottom-color:var(--text4)}
 .nav-links a.active{color:var(--text2)}
+.nav-apps-link{
+  display:block;
+  padding:4px 0;
+  border-bottom:1px solid var(--accent-border);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--accent-hi);
+}
+.nav-apps-link:hover,
+.nav-apps-link.active{color:var(--accent-hi);border-bottom-color:var(--accent)}
 .nav-cta{
   background:transparent;color:var(--accent-hi);
   padding:8px 20px;border:1px solid var(--accent-border);
@@ -32,3 +44,14 @@ nav.scrolled{background:rgba(13,13,12,0.97);border-bottom-color:var(--line)}
 .mobile-menu.open{display:block}
 .mobile-menu a{display:block;padding:12px 0;color:var(--text2);text-decoration:none;font-size:14px;letter-spacing:1px;font-weight:600;text-transform:uppercase;border-bottom:1px solid var(--border)}
 .mobile-menu a:last-child{border:none}
+.mobile-apps-link{
+  display:block;
+  padding:12px 0;
+  border-bottom:1px solid var(--border);
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--accent-hi);
+}
+.mobile-apps-link.active{color:var(--accent-hi);border-bottom-color:var(--accent-border)}
