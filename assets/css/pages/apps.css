@@ -1,6 +1,6 @@
 .apps-page{background:#0a0c0e}
 .apps-page main{min-height:calc(100vh - 174px)}
-.apps-page .nav-apps-link.active{color:var(--accent-hi);border-bottom-color:var(--accent)}
+.apps-page .nav-links .nav-apps-link.active{color:var(--accent-hi);border-bottom-color:var(--accent)}
 
 .apps-intro{
   padding:142px 60px 68px;
@@ -24,7 +24,38 @@
 .apps-page-title em{font-weight:400;color:var(--text2)}
 .apps-page-desc{max-width:720px;font-size:17px;line-height:1.8;color:var(--text2)}
 
-.apps-products{padding:72px 60px 100px;background:#0a0c0e}
+.apps-network-bridge{
+  width:calc(100% - 120px);
+  max-width:1500px;
+  height:64px;
+  margin:24px auto 0;
+  display:grid;
+  grid-template-columns:minmax(34px,1fr) 22px minmax(84px,1.25fr) 48px minmax(70px,1fr) 18px minmax(62px,0.86fr) 42px minmax(34px,1fr);
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  color:rgba(88,185,231,0.46);
+}
+.bridge-line,.bridge-link{height:1px;position:relative;background:linear-gradient(90deg,transparent,currentColor)}
+.bridge-line-right{background:linear-gradient(90deg,currentColor,transparent)}
+.bridge-link{background:rgba(88,185,231,0.34)}
+.bridge-link i{position:absolute;top:50%;width:4px;height:4px;border-radius:50%;background:#53bcea;box-shadow:0 0 8px rgba(83,188,234,0.4);transform:translate(-50%,-50%)}
+.bridge-link i:nth-child(1){left:16%}
+.bridge-link i:nth-child(2){left:54%}
+.bridge-link i:nth-child(3){left:86%}
+.bridge-link-accent{background:linear-gradient(90deg,rgba(88,185,231,0.34),rgba(212,96,10,0.7),rgba(88,185,231,0.34))}
+.bridge-link-accent i:nth-child(2){background:var(--accent);box-shadow:0 0 8px rgba(212,96,10,0.38)}
+.bridge-device{position:relative;justify-self:center;border:1px solid currentColor;background:rgba(30,120,166,0.025)}
+.bridge-phone{width:16px;height:30px;border-radius:3px}
+.bridge-phone::before{content:'';position:absolute;top:3px;left:50%;width:5px;height:1px;background:currentColor;transform:translateX(-50%)}
+.bridge-phone-small{width:14px;height:26px;opacity:0.72}
+.bridge-laptop{width:44px;height:27px;border-radius:2px}
+.bridge-laptop::after{content:'';position:absolute;left:-5px;right:-5px;bottom:-4px;height:3px;border:1px solid currentColor;border-top:0;border-radius:0 0 4px 4px}
+.bridge-laptop i{position:absolute;inset:4px;border:1px solid rgba(88,185,231,0.16)}
+.bridge-laptop-small{width:38px;height:24px;opacity:0.72}
+.bridge-link-short{opacity:0.7}
+
+.apps-products{padding:26px 60px 100px;background:#0a0c0e}
 .sova-product{
   max-width:1500px;
   margin:0 auto;
@@ -102,27 +133,37 @@
   grid-area:description;
   max-width:680px;
   margin-bottom:28px;
-  font-size:16px;
+  font-size:17px;
   line-height:1.75;
   color:var(--text2);
 }
 .sova-routes{
   grid-area:routes;
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-bottom:30px;
+  max-width:480px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:7px;
+  margin:0 0 32px 3px;
+  padding-left:24px;
+  position:relative;
 }
+.sova-routes::before{content:'';position:absolute;top:18px;bottom:18px;left:5px;width:1px;background:linear-gradient(180deg,rgba(82,169,214,0.14),rgba(82,169,214,0.62),rgba(82,169,214,0.14))}
 .sova-routes span{
-  padding:7px 10px;
+  min-height:42px;
+  padding:10px 14px;
+  display:flex;
+  align-items:center;
+  position:relative;
   border:1px solid rgba(82,169,214,0.18);
   background:rgba(43,126,169,0.07);
   font-family:'JetBrains Mono',monospace;
-  font-size:10px;
+  font-size:12px;
+  font-weight:500;
   line-height:1.4;
-  letter-spacing:0.6px;
+  letter-spacing:0.8px;
   color:#92c7e0;
 }
+.sova-routes span::before{content:'';position:absolute;left:-23px;top:50%;width:8px;height:8px;border:1px solid #55b9e8;border-radius:50%;background:#0d171e;box-shadow:0 0 0 3px rgba(85,185,232,0.06);transform:translateY(-50%)}
 .sova-benefits{
   grid-area:benefits;
   display:grid;
@@ -141,26 +182,24 @@
   border-radius:50%;
   box-shadow:0 0 0 3px rgba(84,183,232,0.06);
 }
-.sova-benefit strong{display:block;margin-bottom:5px;font-size:13px;font-weight:600;color:var(--text)}
-.sova-benefit p{font-size:12px;line-height:1.55;color:var(--text3)}
-.sova-actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.sova-benefit strong{display:block;margin-bottom:6px;font-size:14px;font-weight:600;color:var(--text)}
+.sova-benefit p{font-size:13px;line-height:1.58;color:var(--text3)}
+.sova-actions{grid-area:actions;display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:12px;margin-top:34px}
 .sova-cta{
-  min-height:46px;
-  padding:12px 18px;
+  min-height:58px;
+  padding:11px 17px;
   display:inline-flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
   border:1px solid rgba(82,169,214,0.32);
   font-family:'JetBrains Mono',monospace;
-  font-size:10px;
-  font-weight:500;
-  line-height:1.4;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
   color:#78c5eb;
 }
-.sova-cta-primary{background:rgba(34,122,169,0.12)}
-.sova-cta-secondary{border-color:var(--accent-border);color:var(--accent-hi)}
+.sova-cta strong{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;line-height:1.4;letter-spacing:1px;text-transform:uppercase}
+.sova-cta small{margin-top:3px;font-family:'JetBrains Mono',monospace;font-size:8px;line-height:1.3;letter-spacing:1px;text-transform:none;color:var(--text3)}
+.sova-cta-android{background:rgba(34,122,169,0.12)}
+.sova-cta-windows{border-color:rgba(212,96,10,0.32);background:rgba(212,96,10,0.045);color:var(--accent-hi)}
 
 .sova-visual{
   grid-area:visual;
@@ -168,8 +207,9 @@
   min-height:590px;
   align-self:stretch;
   display:grid;
-  grid-template-columns:minmax(74px,0.8fr) minmax(34px,0.42fr) minmax(110px,1fr) minmax(34px,0.42fr) minmax(110px,1.12fr);
+  grid-template-columns:minmax(64px,0.72fr) minmax(24px,0.3fr) minmax(112px,1fr) minmax(24px,0.3fr) minmax(104px,0.9fr);
   align-items:center;
+  padding:0 28px;
   position:relative;
   isolation:isolate;
   overflow:hidden;
@@ -200,9 +240,8 @@
 .sova-device{position:relative;z-index:2;color:#8ad0f1}
 .sova-phone{width:68px;height:128px;justify-self:end;border:1px solid rgba(137,208,241,0.55);border-radius:12px;background:#081018;box-shadow:0 14px 30px rgba(0,0,0,0.24)}
 .sova-device-screen{position:absolute;inset:9px 6px 8px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:12px;border:1px solid rgba(74,166,211,0.16);background:linear-gradient(155deg,rgba(46,153,206,0.16),rgba(5,15,23,0.4))}
-.sova-device-screen span{font-family:'JetBrains Mono',monospace;font-size:7px;letter-spacing:1px;text-transform:uppercase;color:rgba(145,210,241,0.7)}
 .sova-device-speaker{position:absolute;top:4px;left:50%;width:14px;height:1px;z-index:2;background:rgba(145,210,241,0.4);transform:translateX(-50%)}
-.sova-laptop{width:128px;height:88px;justify-self:start;border:1px solid rgba(137,208,241,0.55);border-radius:5px;background:#081018;box-shadow:0 14px 30px rgba(0,0,0,0.24)}
+.sova-laptop{width:112px;height:78px;justify-self:center;border:1px solid rgba(137,208,241,0.55);border-radius:5px;background:#081018;box-shadow:0 14px 30px rgba(0,0,0,0.24)}
 .sova-laptop .sova-device-screen{inset:6px;padding-bottom:10px}
 .sova-laptop-base{position:absolute;left:-10px;right:-10px;bottom:-7px;height:6px;border:1px solid rgba(137,208,241,0.42);border-radius:0 0 8px 8px;background:#0a1822}
 .sova-transfer-line{height:1px;position:relative;z-index:1;background:linear-gradient(90deg,rgba(74,188,236,0.12),#59c3ef)}
@@ -217,7 +256,8 @@
 
 @media(max-width:1200px){
   .apps-intro{padding:130px 44px 62px}
-  .apps-products{padding:64px 44px 84px}
+  .apps-network-bridge{width:calc(100% - 88px)}
+  .apps-products{padding:24px 44px 84px}
   .sova-product{grid-template-columns:minmax(0,1fr) minmax(340px,0.82fr);column-gap:42px;padding:38px}
   .sova-benefits{grid-template-columns:1fr;gap:14px}
   .sova-visual{min-height:570px}
@@ -225,7 +265,8 @@
 
 @media(max-width:900px){
   .apps-intro{padding:116px 28px 54px}
-  .apps-products{padding:54px 28px 72px}
+  .apps-network-bridge{width:calc(100% - 56px);margin-top:20px}
+  .apps-products{padding:22px 28px 72px}
   .sova-product{
     padding:34px;
     grid-template-columns:1fr;
@@ -246,24 +287,30 @@
   .apps-intro{padding:104px 20px 46px}
   .apps-page-title{font-size:clamp(42px,13vw,58px)}
   .apps-page-desc{font-size:15px;line-height:1.7}
-  .apps-products{padding:38px 20px 60px}
+  .apps-network-bridge{width:calc(100% - 40px);height:54px;margin-top:18px;grid-template-columns:minmax(28px,1fr) 18px minmax(70px,1.2fr) 40px minmax(28px,1fr)}
+  .apps-network-bridge .bridge-link-accent,
+  .apps-network-bridge .bridge-phone-small,
+  .apps-network-bridge .bridge-link-short,
+  .apps-network-bridge .bridge-laptop-small{display:none}
+  .apps-products{padding:20px 20px 60px}
   .sova-product{padding:26px 20px}
-  .sova-marker{font-size:9px;letter-spacing:1.4px}
+  .sova-marker{font-size:10px;letter-spacing:1.4px}
   .sova-title{font-size:54px}
   .sova-tagline{font-size:25px;line-height:1.28}
-  .sova-description{font-size:14px;line-height:1.7}
-  .sova-visual{min-height:360px;margin:2px 0 26px;grid-template-columns:58px minmax(16px,0.35fr) minmax(82px,1fr) minmax(16px,0.35fr) 88px}
+  .sova-description{font-size:15px;line-height:1.7}
+  .sova-visual{min-height:360px;margin:2px 0 26px;padding:0 10px;grid-template-columns:52px minmax(14px,0.3fr) minmax(82px,1fr) minmax(14px,0.3fr) 76px}
   .sova-phone{width:48px;height:94px}
-  .sova-laptop{width:82px;height:58px}
+  .sova-laptop{width:74px;height:54px}
   .sova-logo-stage img{width:82px;height:104px}
   .sova-logo-halo{width:106px;height:106px}
   .network-orbit-one{width:220px;height:220px}
   .network-orbit-two{width:310px;height:310px}
   .sova-visual-caption{bottom:18px;font-size:7px;letter-spacing:0.8px}
-  .sova-routes{gap:7px;margin-bottom:26px}
-  .sova-routes span{font-size:9px}
+  .sova-routes{gap:7px;margin-bottom:26px;padding-left:22px}
+  .sova-routes span{min-height:42px;font-size:11px}
+  .sova-routes span::before{left:-21px}
   .sova-benefits{grid-template-columns:1fr;gap:15px}
-  .sova-actions{flex-direction:column}
+  .sova-actions{grid-template-columns:1fr}
   .sova-cta{width:100%;justify-content:flex-start}
   footer{padding:42px 20px 30px}
   .footer-top{display:block}
