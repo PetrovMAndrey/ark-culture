@@ -30,7 +30,7 @@
   height:64px;
   margin:24px auto 0;
   display:grid;
-  grid-template-columns:minmax(34px,1fr) 22px minmax(84px,1.25fr) 48px minmax(70px,1fr) 18px minmax(62px,0.86fr) 42px minmax(34px,1fr);
+  grid-template-columns:minmax(24px,0.7fr) 20px minmax(36px,0.66fr) 46px minmax(30px,0.55fr) 12px minmax(34px,0.62fr) 16px minmax(30px,0.56fr) 38px minmax(34px,0.62fr) 14px minmax(32px,0.58fr) 42px minmax(24px,0.7fr);
   align-items:center;
   position:relative;
   overflow:hidden;
@@ -49,11 +49,14 @@
 .bridge-phone{width:16px;height:30px;border-radius:3px}
 .bridge-phone::before{content:'';position:absolute;top:3px;left:50%;width:5px;height:1px;background:currentColor;transform:translateX(-50%)}
 .bridge-phone-small{width:14px;height:26px;opacity:0.72}
+.bridge-phone-tiny{width:12px;height:22px;opacity:0.6}
 .bridge-laptop{width:44px;height:27px;border-radius:2px}
 .bridge-laptop::after{content:'';position:absolute;left:-5px;right:-5px;bottom:-4px;height:3px;border:1px solid currentColor;border-top:0;border-radius:0 0 4px 4px}
 .bridge-laptop i{position:absolute;inset:4px;border:1px solid rgba(88,185,231,0.16)}
 .bridge-laptop-small{width:38px;height:24px;opacity:0.72}
+.bridge-laptop-wide{width:46px;height:26px;opacity:0.82}
 .bridge-link-short{opacity:0.7}
+.bridge-hub{width:10px;height:10px;justify-self:center;border:1px solid rgba(88,185,231,0.62);border-radius:50%;background:#0a1116;box-shadow:0 0 0 4px rgba(83,188,234,0.045)}
 
 .apps-products{padding:26px 60px 100px;background:#0a0c0e}
 .sova-product{
@@ -87,17 +90,6 @@
   width:58%;
   height:2px;
   background:linear-gradient(90deg,#39a8df,rgba(57,168,223,0));
-}
-.sova-product::after{
-  content:'';
-  position:absolute;
-  width:480px;
-  height:480px;
-  left:-240px;
-  bottom:-360px;
-  border:1px solid rgba(212,96,10,0.16);
-  border-radius:50%;
-  pointer-events:none;
 }
 .sova-marker{
   grid-area:marker;
@@ -135,7 +127,7 @@
   margin-bottom:28px;
   font-size:17px;
   line-height:1.75;
-  color:var(--text2);
+  color:#aaa69e;
 }
 .sova-routes{
   grid-area:routes;
@@ -183,7 +175,7 @@
   box-shadow:0 0 0 3px rgba(84,183,232,0.06);
 }
 .sova-benefit strong{display:block;margin-bottom:6px;font-size:14px;font-weight:600;color:var(--text)}
-.sova-benefit p{font-size:13px;line-height:1.58;color:var(--text3)}
+.sova-benefit p{font-size:13px;line-height:1.58;color:#8f8b83}
 .sova-actions{grid-area:actions;display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:12px;margin-top:34px}
 .sova-cta{
   min-height:58px;
@@ -289,9 +281,15 @@
   .apps-page-desc{font-size:15px;line-height:1.7}
   .apps-network-bridge{width:calc(100% - 40px);height:54px;margin-top:18px;grid-template-columns:minmax(28px,1fr) 18px minmax(70px,1.2fr) 40px minmax(28px,1fr)}
   .apps-network-bridge .bridge-link-accent,
+  .apps-network-bridge .bridge-link-mid,
+  .apps-network-bridge .bridge-hub,
   .apps-network-bridge .bridge-phone-small,
   .apps-network-bridge .bridge-link-short,
-  .apps-network-bridge .bridge-laptop-small{display:none}
+  .apps-network-bridge .bridge-laptop-small,
+  .apps-network-bridge .bridge-link-tail,
+  .apps-network-bridge .bridge-phone-tiny,
+  .apps-network-bridge .bridge-link-final,
+  .apps-network-bridge .bridge-laptop-wide{display:none}
   .apps-products{padding:20px 20px 60px}
   .sova-product{padding:26px 20px}
   .sova-marker{font-size:10px;letter-spacing:1.4px}
